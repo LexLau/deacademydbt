@@ -22,3 +22,4 @@ WITH purchase_src AS (
     WHERE CREATED_AT > (SELECT MAX(UPDATE_DTS) FROM {{this}})
     {% endif %}
 )
+SELECT * FROM purchase_src
